@@ -94,7 +94,41 @@ echo "CPU MHz: $(grep 'cpu MHz' /proc/cpuinfo | head -n 1 | awk '{print $4}')"
 echo "Cache Size: $(grep 'cache size' /proc/cpuinfo | head -n 1 | awk '{print $4}')"
 ```
 
-### 4. Disk Space Usage Summary
+### 4. System and Path Information
+
+#### Problem Statement
+
+Write a shell script to display system information (hostname, kernel version, and current date) and path information (current working directory and home directory).
+
+#### Thought Process
+
+* Use `hostname` command to get the system hostname.
+* Use `uname -r` command to get the kernel version.
+* Use `date` command to get the current date.
+* Use `pwd` command to get the current working directory.
+* Use `echo ~` command to get the home directory.
+
+#### Code
+
+Refer to `04.sh` for the implementation.
+
+```bash
+#!/bin/bash
+
+echo "System Information:"
+echo "------------------"
+echo "Hostname: $(hostname)"
+echo "Kernel Version: $(uname -r)"
+echo "Current Date: $(date)"
+
+echo
+echo "Path Information:"
+echo "-----------------"
+echo "Current Working Directory: $(pwd)"
+echo "Home Directory: $(echo ~)"
+```
+
+### 5. Disk Space Usage Summary
 
 #### Problem Statement
 
@@ -175,6 +209,7 @@ chmod +x *.sh
 ├── 01.sh  # File or Directory Type
 ├── 02.sh  # Directories in PATH
 ├── 03.sh  # Processor Information
+├── 04.sh  # System and Path Information
 ├── 05.sh  # Disk Space Usage Summary
 └── README.md  # Documentation
 ```
