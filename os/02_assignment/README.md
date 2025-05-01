@@ -193,13 +193,17 @@ done
 -------------------------
 
 1. Make the script executable:
+
    ```bash
-chmod +x *.sh
-```
+   chmod +x *.sh
+   ```
+
 2. Run the script:
+
    ```bash
-./<script_name>.sh [arguments]
-```
+   ./<script_name>.sh [arguments]
+   ```
+
 
 ## Directory Structure
 ---------------------
